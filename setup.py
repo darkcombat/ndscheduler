@@ -70,8 +70,8 @@ setup(
     download_url='https://pypi.org/simple/ndscheduler/#downloads',
     license='Apache License, Version 2',
     keywords='scheduler nextdoor cron python',
-    packages=find_packages(),
-    include_package_data=True,
+    packages=find_packages(exclude=["simple_scheduler", "*.simple_scheduler.*"]),
+    include_package_data=False,
     extras_require={'python_version<"3.3"': ['funcsigs']},
     tests_require=[
         'funcsigs',
